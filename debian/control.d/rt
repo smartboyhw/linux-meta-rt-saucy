@@ -1,0 +1,41 @@
+Package: linux-headers-rt
+Architecture: i386 amd64
+Section: devel
+Priority: optional
+Depends: ${misc:Depends}, linux-headers-${kernel-abi-version}-rt
+Description: rt Linux kernel headers
+ This package will always depend on the latest rt kernel headers
+ available.
+
+Package: linux-image-rt
+Architecture: i386 amd64
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-image-${kernel-abi-version}-rt, linux-firmware
+Description: rt Linux kernel image
+ This package will always depend on the latest rt kernel image
+ available.
+
+Package: linux-rt
+Architecture: i386 amd64
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-image-rt (= ${binary:Version}), linux-headers-rt (= ${binary:Version})
+Description: Complete rt Linux kernel
+ This package will always depend on the latest complete rt Linux kernel
+ available.
+
+#Package: linux-backports-modules-headers-RELEASE_NAME-rt
+#Architecture: amd64 i386
+#Depends: ${misc:Depends}, linux-headers-lbm-${kernel-abi-version}-rt
+#Description: Backported driver headers for rt kernel image
+# This empty package allows people to keep their backported module
+# headers up-to-date when upgrading their Linux kernel.
+#
+#Package: linux-backports-modules-alsa-RELEASE_NAME-rt
+#Architecture: amd64 i386
+#Depends: ${misc:Depends}, linux-backports-modules-alsa-${kernel-abi-version}-rt
+#Description: Backported drivers for alsa-driver snapshot.
+# This empty package allows people to keep their alsa-driver snapshot
+# up-to-date when upgrading their Linux kernel.
+#

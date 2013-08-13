@@ -1,0 +1,6 @@
+linux-meta-rt (3.10.0.6.3) UNRELEASED; urgency=low
+
+  * Initial release. 
+
+ -- Howard Chan <smartboyhw@gmail.com>  Tue, 13 Aug 2013 21:47:12 +0800
+

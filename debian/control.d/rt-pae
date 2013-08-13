@@ -1,0 +1,24 @@
+Package: linux-headers-rt-pae
+Architecture: i386
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-headers-rt
+Description: Transitional package
+ This package will always depend on linux-headers-rt
+
+Package: linux-image-rt-pae
+Architecture: i386
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-image-rt
+Description: Transitional package
+ This package will always depend on linux-image-rt
+
+Package: linux-rt-pae
+Architecture: i386
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-rt
+Description: Transitional package
+ This package will always depend on linux-rt
+

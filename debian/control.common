@@ -1,0 +1,7 @@
+Source: linux-meta-rt
+Section: devel
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Uploaders: UbuntuStudio Developers <ubuntu-studio-devel@lists.ubuntu.com>
+Standards-Version: 3.9.2
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk

@@ -1,0 +1,142 @@
+Source: linux-meta-rt
+Section: devel
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Uploaders: UbuntuStudio Developers <ubuntu-studio-devel@lists.ubuntu.com>
+Standards-Version: 3.9.2
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
+
+Package: linux-headers-lowlatency-pae
+Architecture: i386
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-headers-lowlatency
+Description: Transitional package
+ This package will always depend on linux-headers-lowlatency
+
+Package: linux-image-lowlatency-pae
+Architecture: i386
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-image-lowlatency
+Description: Transitional package
+ This package will always depend on linux-image-lowlatency
+
+Package: linux-lowlatency-pae
+Architecture: i386
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-lowlatency
+Description: Transitional package
+ This package will always depend on linux-lowlatency
+
+
+Package: linux-headers-lowlatency
+Architecture: i386 amd64
+Section: devel
+Priority: optional
+Depends: ${misc:Depends}, linux-headers-${kernel-abi-version}-lowlatency
+Description: lowlatency Linux kernel headers
+ This package will always depend on the latest lowlatency kernel headers
+ available.
+
+Package: linux-image-lowlatency
+Architecture: i386 amd64
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-image-${kernel-abi-version}-lowlatency, linux-firmware
+Description: lowlatency Linux kernel image
+ This package will always depend on the latest lowlatency kernel image
+ available.
+
+Package: linux-lowlatency
+Architecture: i386 amd64
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-image-lowlatency (= ${binary:Version}), linux-headers-lowlatency (= ${binary:Version})
+Description: Complete lowlatency Linux kernel
+ This package will always depend on the latest complete lowlatency Linux kernel
+ available.
+
+#Package: linux-backports-modules-headers-precise-lowlatency
+#Architecture: amd64 i386
+#Depends: ${misc:Depends}, linux-headers-lbm-${kernel-abi-version}-lowlatency
+#Description: Backported driver headers for lowlatency kernel image
+# This empty package allows people to keep their backported module
+# headers up-to-date when upgrading their Linux kernel.
+#
+#Package: linux-backports-modules-alsa-precise-lowlatency
+#Architecture: amd64 i386
+#Depends: ${misc:Depends}, linux-backports-modules-alsa-${kernel-abi-version}-lowlatency
+#Description: Backported drivers for alsa-driver snapshot.
+# This empty package allows people to keep their alsa-driver snapshot
+# up-to-date when upgrading their Linux kernel.
+#
+
+Package: linux-headers-rt
+Architecture: i386 amd64
+Section: devel
+Priority: optional
+Depends: ${misc:Depends}, linux-headers-${kernel-abi-version}-rt
+Description: rt Linux kernel headers
+ This package will always depend on the latest rt kernel headers
+ available.
+
+Package: linux-image-rt
+Architecture: i386 amd64
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-image-${kernel-abi-version}-rt, linux-firmware
+Description: rt Linux kernel image
+ This package will always depend on the latest rt kernel image
+ available.
+
+Package: linux-rt
+Architecture: i386 amd64
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-image-rt (= ${binary:Version}), linux-headers-rt (= ${binary:Version})
+Description: Complete rt Linux kernel
+ This package will always depend on the latest complete rt Linux kernel
+ available.
+
+#Package: linux-backports-modules-headers-precise-rt
+#Architecture: amd64 i386
+#Depends: ${misc:Depends}, linux-headers-lbm-${kernel-abi-version}-rt
+#Description: Backported driver headers for rt kernel image
+# This empty package allows people to keep their backported module
+# headers up-to-date when upgrading their Linux kernel.
+#
+#Package: linux-backports-modules-alsa-precise-rt
+#Architecture: amd64 i386
+#Depends: ${misc:Depends}, linux-backports-modules-alsa-${kernel-abi-version}-rt
+#Description: Backported drivers for alsa-driver snapshot.
+# This empty package allows people to keep their alsa-driver snapshot
+# up-to-date when upgrading their Linux kernel.
+#
+
+Package: linux-headers-rt-pae
+Architecture: i386
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-headers-rt
+Description: Transitional package
+ This package will always depend on linux-headers-rt
+
+Package: linux-image-rt-pae
+Architecture: i386
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-image-rt
+Description: Transitional package
+ This package will always depend on linux-image-rt
+
+Package: linux-rt-pae
+Architecture: i386
+Section: kernel
+Priority: optional
+Depends: ${misc:Depends}, linux-rt
+Description: Transitional package
+ This package will always depend on linux-rt
+
+
